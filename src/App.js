@@ -69,7 +69,10 @@ const override = {
 
 export default function App() {
   const [movies, setMovies] = useState([]);
-  const [watched, setWatched] = useState([]);
+  const [watched, setWatched] = useState(() => {
+    const watchedMovies = localStorage.getItem('watched')
+    return watchedMovies ? JSON.parse(watchedMovies) : []
+  });
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState("");
   const [query, setQuery] = useState("");
@@ -107,12 +110,6 @@ export default function App() {
     };
   };
 
-  // const getMovieDetails = async () => {
-  //   const res = await fetch(`http://www.omdbapi.com/?apikey=${key}&i=${selectedId}`);
-  //   const data = await res.json();
-  //   setSelectedMovie(data);
-  // };
-
   useEffect(() => {
     if (query.length < 3) {
       setMovies([]);
@@ -139,6 +136,10 @@ export default function App() {
   const handleDeleteMovie = (id) => {
     setWatched((prevList) => prevList.filter((movie) => movie.id !== id));
   };
+
+  useEffect(() => {
+    localStorage.setItem('watched', JSON.stringify(watched))
+  }, [watched])
 
   return (
     <>
