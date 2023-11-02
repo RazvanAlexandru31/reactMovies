@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+# React movie rating app
+
+![screenshot]{public/movieapp-1.png}
+![screenshot]{public/reactmlovie-2.png}
+![screenshot]{public/reactmlovie-3.png}
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
