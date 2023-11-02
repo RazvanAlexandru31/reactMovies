@@ -1,8 +1,8 @@
 # React movie rating app
 
-![screenshot]{public/movieapp-1.png}
-![screenshot]{public/reactmlovie-2.png}
-![screenshot]{public/reactmlovie-3.png}
+![screenshot](public/movieapp-1.png)
+![screenshot](public/reactmlovie-2.png)
+![screenshot](public/reactmlovie-3.png)
 
 
 ## Getting Started with Create React App
